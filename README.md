@@ -6,7 +6,7 @@ Please follow [these instructions](https://nodejs.org/en/learn/getting-started/h
 
 ## Available Scripts
 
-In the project directory, you can run:
+To run the application, please run from the project file:
 
 ### `npm i`
 ### `npm start`
@@ -16,3 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+To run the automated tests, please type the following command:
+
+### `npm test`

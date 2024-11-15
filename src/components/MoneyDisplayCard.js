@@ -29,13 +29,13 @@ const MoneyDisplayCard = ({ type, number }) => {
    */
   const moneyAmt = number > 1 ? 
     (type === "penny" ?
-      `${number.toLocaleString('en-US')} pennies` :
-      `${number.toLocaleString('en-US')} ${type}s`) :
-    `${number.toLocaleString('en-US')} ${type}`
+      `${number.toFormat().substring(1)} pennies` :
+      `${number.toFormat().substring(1)} ${type}s`) :
+    `${number.toFormat().substring(1)} ${type}`
 
   return (
     <div className="money-display-card" data-testid="money-display-card">
-      <h2 data-testid="money-amt">{moneyAmt}</h2>
+      <h2 className="money-amt" data-testid="money-amt">{moneyAmt}</h2>
       <img data-testid="money-img" src={imageSource[type]} alt={`${type}`}/>
     </div>
   );

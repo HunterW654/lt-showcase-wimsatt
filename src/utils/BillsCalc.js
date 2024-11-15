@@ -1,30 +1,29 @@
-
 /**
  * Calculates numbers of each bill needed minimally to reach the money amount.
- * @param {float} money
+ * @param {BigNumber} money
  * @returns {array} with map elements {type, number}
  */
 function billsCalc(money) {
-    var dollars = Math.floor(money)
-    var cents = Math.round((money % 1) * 100)
-    const hundreds = Math.floor(dollars / 100)
-    dollars %= 100
-    const fifties = Math.floor(dollars / 50)
-    dollars %= 50
-    const twenties = Math.floor(dollars / 20)
-    dollars %= 20
-    const tens = Math.floor(dollars / 10)
-    dollars %= 10
-    const fives = Math.floor(dollars / 5)
-    dollars %= 5
-    const ones = Math.floor(dollars)
-    const quarters = Math.floor(cents / 25)
-    cents %= 25
-    const dimes = Math.floor(cents / 10)
-    cents %= 10
-    const nickels = Math.floor(cents / 5)
-    cents %= 5
-    const pennies = Math.floor(cents)
+    const hundreds = money.dividedToIntegerBy(100);
+    money = money.modulo(100);
+    const fifties = money.dividedToIntegerBy(50);
+    money = money.modulo(50);
+    const twenties = money.dividedToIntegerBy(20);
+    money = money.modulo(20);
+    const tens = money.dividedToIntegerBy(10);
+    money = money.modulo(10);
+    const fives = money.dividedToIntegerBy(5);
+    money = money.modulo(5);
+    const ones = money.dividedToIntegerBy(1);
+
+    money = money.modulo(1).multipliedBy(100);
+    const quarters = money.dividedToIntegerBy(25);
+    money = money.modulo(25);
+    const dimes = money.dividedToIntegerBy(10);
+    money = money.modulo(10);
+    const nickels = money.dividedToIntegerBy(5);
+    money = money.modulo(5);
+    const pennies = money.dividedToIntegerBy(1);
 
     return [
         {"type": "$100 bill", "number": hundreds},
