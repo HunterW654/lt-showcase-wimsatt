@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.money-display-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.money-container {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    max-width: 400px;
+    width: 80%;
+}
+
+.instructions {
+    justify-content: center;
+    padding: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.input-container {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.currency-input {
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: lightgray;
+    color: navy;
+    font-size: 20px;
+    border: 3px solid #cdcdcd;
+    padding: 10px 15px;
+    font-family: 'Roboto';
+}
+
+.submit-btn {
+    margin-top: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: lightblue;
+    color: black;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: navy;
+    color: white;
+}
+
+img {
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+}
