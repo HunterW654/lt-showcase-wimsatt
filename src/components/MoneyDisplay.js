@@ -19,12 +19,16 @@ const MoneyDisplay = () => {
 
   const handleValueChange = (e) => {
     var input = e.target.value;
+
+    // Parse input to only be the numbers and decimal point
     input = input.split('$').join('').split(',').join('')
+
+    // If user types in ".", make input "0."
     if(input === '.') {
       input = "0."
     }
     
-    // Allow typing decimal point and up to two decimal places
+    // Allow typing decimal point and up to two decimal places (gotten from internet)
     if (input === '' || /^\d*\.?\d{0,2}$/.test(input)) {
       setInputValue(input);
     }
@@ -39,6 +43,7 @@ const MoneyDisplay = () => {
   const handleSubmit = () => {
     const bigNumberValue = new BigNumber(inputValue);
     
+    // Fail safe in case user gets an invalid input in
     if (bigNumberValue.isNaN()) {
       console.error('Invalid input: Not a number');
       setCalculatedBills([]);
