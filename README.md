@@ -6,12 +6,11 @@ Please follow [these instructions](https://nodejs.org/en/learn/getting-started/h
 
 ## Available Scripts
 
-To run the application, please run from the project file:
+To run the application, please clone the repository and run from the project file:
 
 ### `npm i`
 ### `npm start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
